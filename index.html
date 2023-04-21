@@ -53,17 +53,18 @@
             const titleElem = document.getElementById('title');
             const subtitleElem = document.getElementById('subtitle');
 
-            if (userLang === 'en' || userLang.startsWith('en-')) {
-                titleElem.innerText = 'Dolores: Virtual Friend';
-                subtitleElem.innerText = 'Chat, Accompany, Evolve personality.';
-            } else {
+            if (userLang === 'zh' || userLang.startsWith('zh-')) {
                 titleElem.innerText = 'Dolores: 虚拟搭档';
                 subtitleElem.innerText = '陪伴、记忆、进化人格。';
+            } else {
+                titleElem.innerText = 'Dolores: Virtual Friend';
+                subtitleElem.innerText = 'Chat, Accompany, Evolve personality.';
             }
         }
 
         updateLanguage();
     </script>
+
 </body>
 </html>
 
