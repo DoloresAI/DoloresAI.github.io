@@ -5,37 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy for Dolores</title>
     <link rel="stylesheet" href="tailwind.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKPFZ9RFRG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KKPFZ9RFRG');
+    </script>
+
     <style>
         .theme-color {
-            background-color: black;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        #data-storage {
             background-color: #E43F43;
+        }
+
+        html, body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+        }
+
+        #data-storage {
+            background-color: black;
         }
     </style>
 </head>
 <body class="theme-color">
-    <div class="container mx-auto py-16 px-6 text-white">
+    <div class="container mx-auto py-16 px-6">
         <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center">Privacy Policy for Dolores</h1>
 
         <p>At Dolores, one of our main priorities is the privacy of our visitors.</p>
-        <p class="mt-2">This Privacy Policy document contains types of information that is collected and recorded by Dolores and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at <a href="mailto:myfancoo@gmail.com">myfancoo@gmail.com</a>.</p>
+        <p class="mt-2">Dolores' Privacy Policy outlines the kinds of information we collect and how we utilize it. For any further queries or additional details about our Privacy Policy, please don't hesitate to reach us at <a href="mailto:myfancoo@gmail.com">myfancoo@gmail.com</a>.</p>
 
         <section id="data-storage" class="mt-4 mb-12 bg-black p-4 rounded">
             <h2 class="text-2xl font-bold mb-4 text-white">Where does my data stored?</h2>
             <p class="text-lg leading-relaxed text-white">
-                Your data is only stored on your device. However, when you talk with Dolores, the app communicates with OpenAI's API to generate a response. The generated text is then processed using a Text-to-Speech API to create an audible output. It is important to note that your recorded voice is NEVER uploaded or stored.
+                When you interact with Dolores, your chat messages are exclusively retained on your device for your privacy. Communication occurs between the app and OpenAI's API to formulate a response to your queries. This generated text subsequently undergoes transformation via a Text-to-Speech API, providing you with an audible output. It's crucial to underscore that your recorded voice is never uploaded or stored, ensuring the utmost respect for your privacy.
             </p>
         </section>
 
         <!-- Add the rest of the sections from the provided template here -->
 
         <section id="footer" class="mt-12 text-center">
-            <a href="index.html" class="text-lg underline text-white">Return to Home</a>
+            <a href="index.html" class="text-lg underline">Return to Home</a>
         </section>
     </div>
 </body>
