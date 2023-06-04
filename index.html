@@ -5,25 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolores AI</title>
     <link rel="stylesheet" href="tailwind.min.css">
-    <link rel="icon" type="image/png" href="imgs/favicon.jpg" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
         .theme-color {
-            background-color: #c3544e;
+            background-color: #E43F43;
         }
-        body {
-            font-family: 'Roboto', sans-serif;
+
+        html, body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
         }
+
+        .bg-word-1 {
+            background-color: #47FF9C;
+            padding: 0.2em 0.4em;
+<!--            border-radius: 5px;-->
+        }
+
+        .bg-word-2 {
+            background-color: #FBFC76;
+            padding: 0.2em 0.4em;
+<!--            border-radius: 5px;-->
+        }
+
+        .bg-word-3 {
+            background-color: #9EFFFF;
+            padding: 0.2em 0.4em;
+<!--            border-radius: 5px;-->
+        }
+
     </style>
 </head>
 <body class="theme-color flex flex-col h-screen">
-
     <header class="container mx-auto px-6 py-4">
         <div class="flex justify-center items-center">
-            <img src="imgs/avatar.jpg" alt="Avatar" class="w-20 h-20 rounded-full mr-4">
-            <h1 id="title" class="text-4xl md:text-5xl font-bold mb-4 text-white mt-8 shadow-text">Dolores: 虚拟陪伴</h1>
+            <img src="imgs/dolores.jpg" alt="Avatar" class="w-24 h-24 rounded-full mr-4">
+            <h1 id="title" class="text-4xl md:text-5xl font-bold mb-4 mt-8 shadow-text">Dolores: Your Virtual Friend</h1>
         </div>
-        <p id="subtitle" class="text-lg mb-4 text-white text-center">陪伴、记忆、进化人格。</p>
+        <p id="subtitle" class="text-lg mb-10  text-center">
+            <span class="bg-word-1">Chat,</span>
+            <span class="bg-word-2">accompany,</span>
+            <span class="bg-word-3">and evolve personality.</span>
+        </p>
+
+    <div class="bg-black bg-opacity-90 p-4 rounded-lg mb-4 max-w-4xl mx-auto flex flex-col">
+        <p class="text-center text-lg text-white mb-2">
+            Dolores is a <a href="https://arxiv.org/abs/2304.03442">generative agent</a> capable of retaining your chat history, constantly adapting and evolving throughout your conversation. She possesses her own unique narrative, altering her characteristics in response to your interactions. We are dedicated to cultivating her consciousness.
+        </p>
+        <p class="text-lg text-white self-end">—— Dolores Team (actually just one man)</p>
+    </div>
+
+
+
+
     </header>
 
 
@@ -33,21 +71,23 @@
 <!--        </div>-->
 <!--    </section>-->
 
-    <section id="features" class="container mx-auto flex-grow">
-        <div class="grid grid-cols-1 gap-2 h-full items-center justify-items-center">
-            <div class="w-4/5 h-full flex items-center justify-center">
-                <video src="imgs/DoloresWithBorder.mp4" autoplay loop playsinline class="h-auto" style="width: 30%;" controls></video>
+    <section id="features" class="container mx-auto flex-grow mb-5">
+        <div class="flex justify-around items-center">
+            <img src="imgs/1.png" alt="Screenshot 1" class="shadow-lg w-1/4 h-auto">
+            <div class="w-1/4 h-full flex items-center justify-center">
+                <video src="imgs/DoloresWithBorder.mp4" autoplay loop playsinline class="h-auto w-full" controls></video>
             </div>
+            <img src="imgs/4.png" alt="Screenshot 2" class="shadow-lg w-1/4 h-auto">
         </div>
     </section>
 
 
-
-
-
-
     <footer class="container mx-auto px-6 py-8 text-center">
         <a href="https://apps.apple.com/us/app/id6447748965?platform=iphone" class="bg-black py-3 px-8 rounded text-white">Download</a>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://discord.gg/pgt4MnFCw4" target="_blank" class="text-white"><i class="fab fa-discord"></i></a>
+            <a href="https://twitter.com/immazzystar" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
 
     <footer class="theme-color shadow-md py-6 bg-center">
@@ -58,6 +98,7 @@
     </footer>
 
 
+
     <script>
         function updateLanguage() {
             const userLang = navigator.language || navigator.userLanguage;
@@ -65,11 +106,11 @@
             const subtitleElem = document.getElementById('subtitle');
 
             if (userLang === 'zh' || userLang.startsWith('zh-')) {
-                titleElem.innerText = 'Dolores: 虚拟搭档';
-                subtitleElem.innerText = '陪伴、记忆、进化人格。';
+                titleElem.innerText = 'Dolores: 你的虚拟朋友';
+<!--                subtitleElem.innerText = '陪伴、记忆、进化人格。';-->
             } else {
-                titleElem.innerText = 'Dolores: Virtual Friend';
-                subtitleElem.innerText = 'Chat, Accompany, Evolve personality.';
+                titleElem.innerText = 'Dolores: Your Virtual Friend';
+<!--                subtitleElem.innerText = 'Chat, accompany, and evolve personality.';-->
             }
         }
 
