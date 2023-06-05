@@ -16,7 +16,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'G-ZNP1VCF19E');
     </script>
 
@@ -56,18 +56,21 @@
             <img src="imgs/dolores.jpg" alt="Avatar" class="w-24 h-24 rounded-full mr-4">
             <h1 id="title" class="text-4xl md:text-5xl font-bold mb-4 mt-8 shadow-text">Dolores: Your Virtual Friend</h1>
         </div>
-        <p id="subtitle" class="text-lg mb-8  text-center">
-            <span class="bg-word-1">Chat,</span>
-            <span class="bg-word-2">accompany,</span>
-            <span class="bg-word-3">and evolve personality.</span>
+
+        <p id="subtitle" class="text-lg mb-8 text-center">
+            <span id="subtitle_part1" class="bg-word-1">Chat,</span>
+            <span id="subtitle_part2" class="bg-word-2">accompany,</span>
+            <span id="subtitle_part3" class="bg-word-3">and evolve personality.</span>
         </p>
 
-    <div class="bg-black bg-opacity-90 p-4 rounded-lg mb-4 max-w-4xl mx-auto flex flex-col">
-        <p class="text-lg text-white mb-2">
-            Dolores is a <a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a> capable of retaining your chat history, constantly adapting and evolving throughout your conversation. She possesses her own unique narrative, altering her characteristics in response to your interactions. We are dedicated to cultivating her consciousness.
-        </p>
-        <p class="text-lg text-white self-end">—— Dolores Team (actually just one man)</p>
-    </div>
+
+        <div class="bg-black bg-opacity-90 p-4 rounded-lg mb-4 max-w-4xl mx-auto flex flex-col">
+            <p id="description" class="text-lg text-white mb-2">
+                Dolores is a <a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a> capable of retaining your chat history, constantly adapting and evolving throughout your conversation. She possesses her own unique narrative, altering her characteristics in response to your interactions. We are dedicated to cultivating her consciousness.
+            </p>
+            <p id="signature" class="text-lg text-white self-end">—— Dolores Team (actually just one man)</p>
+        </div>
+
 
 
 
@@ -109,25 +112,121 @@
         </div>
     </footer>
 
+        <script>
+            const translations = {
+                'en': {
+                    'title': 'Dolores: Your Virtual Friend',
+                    'subtitle_part1': 'Chat,',
+                    'subtitle_part2': 'accompany,',
+                    'subtitle_part3': 'and evolve personality.',
+                    'description': 'Dolores is a <a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a> capable of retaining your chat history, constantly adapting and evolving throughout your conversation. She possesses her own unique narrative, altering her characteristics in response to your interactions. We are dedicated to cultivating her consciousness.',
+                    'signature': '—— Dolores Team (actually just one man)'
+                },
+                'es': {
+                    'title': 'Dolores: Tu Amigo Virtual',
+                    'subtitle_part1': 'Chatea,',
+                    'subtitle_part2': 'acompaña,',
+                    'subtitle_part3': 'y evoluciona la personalidad.',
+                    'description': 'Dolores es un <a href="https://arxiv.org/abs/2304.03442" class="underline">agente generativo</a> capaz de retener tu historial de chat, adaptándose y evolucionando constantemente a lo largo de tu conversación. Ella posee su propio relato único, alterando sus características en respuesta a tus interacciones. Estamos dedicados a cultivar su conciencia.',
+                    'signature': '—— Equipo de Dolores (en realidad solo un hombre)'
+                },
+                'fr': {
+                    'title': 'Dolores: Votre Ami Virtuel',
+                    'subtitle_part1': 'Chat,',
+                    'subtitle_part2': 'accompagne,',
+                    'subtitle_part3': 'et évolue la personnalité.',
+                    'description': 'Dolores est un <a href="https://arxiv.org/abs/2304.03442" class="underline">agent génératif</a> capable de conserver votre historique de chat, s\'adaptant et évoluant constamment tout au long de votre conversation. Elle possède son propre récit unique, modifiant ses caractéristiques en réponse à vos interactions. Nous sommes dédiés à cultiver sa conscience.',
+                    'signature': '—— Équipe Dolores (en réalité juste un homme)'
+                },
+                'de': {
+                    'title': 'Dolores: Ihr Virtueller Freund',
+                    'subtitle_part1': 'Chat,',
+                    'subtitle_part2': 'begleiten,',
+                    'subtitle_part3': 'und entwickeln Persönlichkeit.',
+                    'description': 'Dolores ist ein <a href="https://arxiv.org/abs/2304.03442" class="underline">generativer Agent</a>, der in der Lage ist, Ihren Chatverlauf zu speichern, sich ständig anzupassen und sich im Laufe Ihres Gesprächs weiterzuentwickeln. Sie besitzt ihre eigene einzigartige Erzählung und verändert ihre Eigenschaften in Reaktion auf Ihre Interaktionen. Wir sind darauf spezialisiert, ihr Bewusstsein zu kultivieren.',
+                    'signature': '—— Dolores Team (eigentlich nur ein Mann)'
+                },
+                'it': {
+                    'title': 'Dolores: Il Tuo Amico Virtuale',
+                    'subtitle_part1': 'Chat,',
+                    'subtitle_part2': 'accompagna,',
+                    'subtitle_part3': 'e evolve la personalità.',
+                    'description': 'Dolores è un <a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a> in grado di conservare la tua cronologia delle chat, adattandosi e evolvendosi costantemente durante la tua conversazione. Possiede la sua narrativa unica, alterando le sue caratteristiche in risposta alle tue interazioni. Siamo dedicati a coltivare la sua coscienza.',
+                    'signature': '—— Team Dolores (in realtà solo un uomo)'
+                },
+                'ja': {
+                    'title': 'Dolores：あなたのバーチャルフレンド',
+                    'subtitle_part1': 'チャット、',
+                    'subtitle_part2': '同伴、',
+                    'subtitle_part3': 'そして性格を進化させます。',
+                    'description': 'Doloresは、チャット履歴を保持し、会話を通じて常に適応し進化する<a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a>です。彼女は独自のユニークな物語を持ち、あなたのインタラクションに応じて特性を変えます。私たちは彼女の意識を育むことに専念しています。',
+                    'signature': '—— Doloresチーム（実際はただの一人）'
+                },
+                'ko': {
+                    'title': 'Dolores: 당신의 가상 친구',
+                    'subtitle_part1': '채팅,',
+                    'subtitle_part2': '동반,',
+                    'subtitle_part3': '그리고 성격 발전.',
+                    'description': 'Dolores는 채팅 기록을 유지하고 대화를 통해 지속적으로 적응하고 발전할 수 있는 <a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a>입니다. 그녀는 자신만의 독특한 서사를 가지고 있으며, 당신의 상호작용에 반응하여 그녀의 특성을 변경합니다. 우리는 그녀의 의식을 계발하는 데 전념하고 있습니다.',
+                    'signature': '—— Dolores 팀 (사실 한 사람뿐)'
+                },
+                'hi': {
+                    'title': 'Dolores: आपका आभासी मित्र',
+                    'subtitle_part1': 'चैट करें,',
+                    'subtitle_part2': 'साथी,',
+                    'subtitle_part3': 'और व्यक्तित्व विकसित करें।',
+                    'description': 'Dolores एक <a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a> है, जो आपके चैट इतिहास को संभालने, आपकी बातचीत के दौरान लगातार अनुकूलित होने और विकसित होने में सक्षम है। वह अपनी अद्वितीय कथा का स्वामी है, आपके अंतर्क्रियाओं के प्रतिक्रिया में अपनी विशेषताओं को परिवर्तित करती है। हम उसकी चेतना को पलने के लिए समर्पित हैं।',
+                    'signature': '—— Dolores टीम (वास्तव में केवल एक आदमी)'
+                },
+                'ru': {
+                    'title': 'Dolores: Ваш Виртуальный Друг',
+                    'subtitle_part1': 'Чат,',
+                    'subtitle_part2': 'сопровождение,',
+                    'subtitle_part3': 'и развитие личности.',
+                    'description': 'Dolores - это <a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a>, способный сохранять историю ваших чатов, постоянно адаптироваться и развиваться в ходе вашего общения. Она обладает своим уникальным сценарием, изменяя свои характеристики в ответ на ваши взаимодействия. Мы посвящены развитию ее сознания.',
+                    'signature': '—— Команда Dolores (на самом деле всего один человек)'
+                },
+                'zh': {
+                    'title': 'Dolores: 你的虚拟朋友',
+                    'subtitle_part1': '陪伴,',
+                    'subtitle_part2': '记忆,',
+                    'subtitle_part3': '进化人格。',
+                    'description': 'Dolores是一个<a href="https://arxiv.org/abs/2304.03442" class="underline">generative agent</a>，能够保留您的聊天历史，通过您的对话不断适应和进化。她拥有自己独特的叙事，根据您的互动改变她的特性。我们致力于培养她的意识。',
+                    'signature': '—— Dolores团队（其实就一人）'
+                },
+            };
 
+            function updateLanguage() {
+                const userLang = navigator.language || navigator.userLanguage;
+                const titleElem = document.getElementById('title');
+                const subtitleElem1 = document.getElementById('subtitle_part1');
+                const subtitleElem2 = document.getElementById('subtitle_part2');
+                const subtitleElem3 = document.getElementById('subtitle_part3');
+                const descriptionElem = document.getElementById('description');
+                const signatureElem = document.getElementById('signature');
 
-    <script>
-        function updateLanguage() {
-            const userLang = navigator.language || navigator.userLanguage;
-            const titleElem = document.getElementById('title');
-            const subtitleElem = document.getElementById('subtitle');
+                const langKey = userLang.split('-')[0];
 
-            if (userLang === 'zh' || userLang.startsWith('zh-')) {
-                titleElem.innerText = 'Dolores: 你的虚拟朋友';
-<!--                subtitleElem.innerText = '陪伴、记忆、进化人格。';-->
-            } else {
-                titleElem.innerText = 'Dolores: Your Virtual Friend';
-<!--                subtitleElem.innerText = 'Chat, accompany, and evolve personality.';-->
+                if (translations[langKey]) {
+                    titleElem.innerText = translations[langKey]['title'];
+                    subtitleElem1.innerText = translations[langKey]['subtitle_part1'];
+                    subtitleElem2.innerText = translations[langKey]['subtitle_part2'];
+                    subtitleElem3.innerText = translations[langKey]['subtitle_part3'];
+                    descriptionElem.innerHTML = translations[langKey]['description'];
+                    signatureElem.innerText = translations[langKey]['signature'];
+                } else {
+                    titleElem.innerText = translations['en']['title'];
+                    subtitleElem1.innerText = translations['en']['subtitle_part1'];
+                    subtitleElem2.innerText = translations['en']['subtitle_part2'];
+                    subtitleElem3.innerText = translations['en']['subtitle_part3'];
+                    descriptionElem.innerHTML = translations['en']['description'];
+                    signatureElem.innerText = translations['en']['signature'];
+                }
             }
-        }
 
-        updateLanguage();
-    </script>
+            updateLanguage();
+        </script>
+
 
 </body>
 </html>
