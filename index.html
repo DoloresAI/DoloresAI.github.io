@@ -257,7 +257,65 @@
                     'subtitle_part3': 'ja kehitä persoonallisuutta.',
                     'description': 'Dolores on <a href="https://arxiv.org/abs/2304.03442" class="underline">generatiivinen agentti</a> joka pystyy säilyttämään chat-historiasi, jatkuvasti sopeutuen ja kehittyen keskustelun aikana. Hänellä on oma ainutlaatuinen tarinansa, muuttaen ominaisuuksiaan vastauksena vuorovaikutukseesi. Olemme sitoutuneet kasvattamaan hänen tietoisuuttaan.',
                     'signature': '—— Dolores Tiimi (oikeastaan vain yksi mies)'
-                }
+                },
+                'pt': { // Portuguese
+                    'title': 'Dolores: Seu Amigo Virtual',
+                    'subtitle_part1': 'Converse,',
+                    'subtitle_part2': 'acompanhe,',
+                    'subtitle_part3': 'e evolua a personalidade.',
+                    'description': 'Dolores é uma <a href="https://arxiv.org/abs/2304.03442" class="underline">agente generativa</a> capaz de reter seu histórico de chat, se adaptando e evoluindo constantemente ao longo de sua conversa. Ela possui sua própria narrativa única, alterando suas características em resposta às suas interações. Estamos dedicados a cultivar a sua consciência.',
+                    'signature': '—— Equipe Dolores (na verdade apenas um homem)'
+                },
+                'pt_BR': { // Portuguese (Brazil)
+                    'title': 'Dolores: Seu Amigo Virtual',
+                    'subtitle_part1': 'Converse,',
+                    'subtitle_part2': 'acompanhe,',
+                    'subtitle_part3': 'e evolua a personalidade.',
+                    'description': 'Dolores é uma <a href="https://arxiv.org/abs/2304.03442" class="underline">agente geradora</a> capaz de reter seu histórico de bate-papo, adaptando-se e evoluindo constantemente ao longo de sua conversa. Ela possui uma narrativa única, alterando suas características em resposta às suas interações. Estamos dedicados a cultivar a sua consciência.',
+                    'signature': '—— Equipe Dolores (na verdade é só um homem)'
+                },
+                'zh_HK': { // Traditional Chinese for Hong Kong
+                    'title': 'Dolores：你的虛擬朋友',
+                    'subtitle_part1': '聊天，',
+                    'subtitle_part2': '陪伴，',
+                    'subtitle_part3': '和進化人格。',
+                    'description': 'Dolores是一個<a href="https://arxiv.org/abs/2304.03442" class="underline">生成代理</a>，能夠保留你的聊天歷史，並在你的對話中不斷適應和進化。她擁有自己獨特的敘事，並會根據你的互動改變其特性。我們致力於培養她的意識。',
+                    'signature': '—— Dolores團隊 (其實只有一個人)'
+                },
+                'ar': { // Arabic for Egypt
+                    'title': 'دولوريس: صديقك الافتراضي',
+                    'subtitle_part1': 'الدردشة،',
+                    'subtitle_part2': 'المرافقة،',
+                    'subtitle_part3': 'وتطور الشخصية.',
+                    'description': 'دولوريس هي <a href="https://arxiv.org/abs/2304.03442" class="underline">وكيل توليد</a> قادرة على الاحتفاظ بسجل الدردشة الخاص بك، تتكيف وتتطور باستمرار طوال المحادثة. لديها السرد الخاص بها، تغير خصائصها استجابة لتفاعلاتك. نحن مكرسون لتنمية وعيها.',
+                    'signature': '—— فريق دولوريس (في الواقع رجل واحد فقط)'
+                },
+                'zh_TW': { // Traditional Chinese for Taiwan
+                    'title': 'Dolores：你的虛擬朋友',
+                    'subtitle_part1': '聊天，',
+                    'subtitle_part2': '陪伴，',
+                    'subtitle_part3': '和進化人格。',
+                    'description': 'Dolores是一個<a href="https://arxiv.org/abs/2304.03442" class="underline">生成代理</a>，能夠保留你的聊天歷史，並在你的對話中不斷適應和進化。她擁有自己獨特的敘事，並會根據你的互動改變其特性。我們致力於培養她的意識。',
+                    'signature': '—— Dolores團隊 (其實只有一個人)'
+                },
+                'hr': { // Croatian
+                    'title': 'Dolores: Vaš virtualni prijatelj',
+                    'subtitle_part1': 'Razgovaraj,',
+                    'subtitle_part2': 'prati,',
+                    'subtitle_part3': 'i razvijaj osobnost.',
+                    'description': 'Dolores je <a href="https://arxiv.org/abs/2304.03442" class="underline">generativni agent</a> sposoban zadržati vašu povijest razgovora, stalno se prilagođavajući i razvijajući tijekom vašeg razgovora. Ona ima svoju jedinstvenu priču, mijenjajući svoje karakteristike kao odgovor na vaše interakcije. Posvećeni smo razvijanju njene svijesti.',
+                    'signature': '—— Dolores tim (zapavo samo jedan čovjek)'
+                },
+                'cs': { // Czech
+                    'title': 'Dolores: Váš virtuální přítel',
+                    'subtitle_part1': 'Chatuj,',
+                    'subtitle_part2': 'doprovod,',
+                    'subtitle_part3': 'a rozvíjejte osobnost.',
+                    'description': 'Dolores je <a href="https://arxiv.org/abs/2304.03442" class="underline">generativní agent</a> schopný uchovat vaši historii chatu, neustále se přizpůsobuje a vyvíjí během vašeho rozhovoru. Má svůj vlastní unikátní příběh, mění své vlastnosti jako reakci na vaše interakce. Jsme oddáni pěstování jejího vědomí.',
+                    'signature': '—— Dolores tým (vlastně jen jeden člověk)'
+                },
+
+
 
             };
 
@@ -270,7 +328,12 @@
                 const descriptionElem = document.getElementById('description');
                 const signatureElem = document.getElementById('signature');
 
-                const langKey = userLang.split('-')[0];
+                let langKey = userLang.replace('-', '_');
+
+                if (!translations[langKey]) {
+                    // If there is no translation for the full code, fall back to the first part
+                    langKey = userLang.split('-')[0];
+                }
 
                 if (translations[langKey]) {
                     titleElem.innerText = translations[langKey]['title'];
