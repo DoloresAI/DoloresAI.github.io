@@ -27,7 +27,15 @@
         }
 
         #data-storage {
+            background-color: #30BC8D;
+        }
+
+        #data-usage {
             background-color: black;
+        }
+
+        #data-security {
+            background-color: #DEDC2B;
         }
     </style>
 </head>
@@ -35,13 +43,33 @@
     <div class="container mx-auto py-16 px-6">
         <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center">Privacy Policy for Dolores</h1>
 
-        <p>At Dolores, one of our main priorities is the privacy of our visitors.</p>
-        <p class="mt-2">Dolores' Privacy Policy outlines the kinds of information we collect and how we utilize it. For any further queries or additional details about our Privacy Policy, please don't hesitate to reach us at <a href="mailto:myfancoo@gmail.com">myfancoo@gmail.com</a>.</p>
+<!--        <p>At Dolores, one of our main priorities is the privacy of our visitors.</p>-->
+<!--        <p class="mt-2">Dolores' Privacy Policy outlines the kinds of information we collect and how we utilize it. For any further queries or additional details about our Privacy Policy, please don't hesitate to reach us at <a href="mailto:myfancoo@gmail.com">hi@dolores.app</a>.</p>-->
 
-        <section id="data-storage" class="mt-4 mb-12 bg-black p-4 rounded">
-            <h2 class="text-2xl font-bold mb-4 text-white">Where does my data stored?</h2>
+        <section id="data-storage" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-black">Where does my data stored?</h2>
+            <p class="text-lg leading-relaxed text-black">
+                When you interact with Dolores, your chat history is stored only on your device. When Dolores responds to you, your current message is sent to our backend to request a response from OpenAI. The GPT model organizes the language for Dolores and generates a response. This generated text subsequently undergoes a transformation via a Text-to-Speech API, providing you with an audible output. It's crucial to underscore that your recorded voice is never uploaded or stored, ensuring the utmost respect for your privacy.
+            </p>
+        </section>
+
+        <section id="data-usage" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-white">How will you use my data?</h2>
             <p class="text-lg leading-relaxed text-white">
-                When you interact with Dolores, your chat messages are exclusively retained on your device for your privacy. Communication occurs between the app and OpenAI's API to formulate a response to your queries. This generated text subsequently undergoes transformation via a Text-to-Speech API, providing you with an audible output. It's crucial to underscore that your recorded voice is never uploaded or stored, ensuring the utmost respect for your privacy.
+                We place paramount importance on the privacy and security of each user's information. As such, we aim to minimize any risk of personal information and identity exposure. However, there are specific instances where your personal data may be involved:<br>
+                1. Mitigating abusive behaviors and hacking: This might include analyzing logs from users with extensive, high-frequency usage.<br>
+                2. Enhancing user experience: We aim to optimize and enhance our service based on problems identified in user feedback. <br>
+                It's important to note that Dolores does not intentionally collect your personal information, and we make concerted efforts to avoid doing so.
+            </p>
+        </section>
+
+        <section id="data-security" class="mt-4 mb-0 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-black">What if I don't believe you?</h2>
+            <p class="text-lg leading-relaxed text-black">
+                Even so, you can follow a few principles in use to minimize the risk of information leakage:<br>
+                1. Do not use voice input. If you are worried about the leakage of your voice information, you can choose to use text input.<br>
+                2. Do not reveal any real personal information to Dolores, so your privacy will not be known by OpenAI, Dolores, and any potential hackers.<br>
+                3. Apply to delete all stored information: please contact hi@dolores.app.
             </p>
         </section>
 
