@@ -64,9 +64,34 @@
             padding: 0.2em 0.4em;
         }
 
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #E43F43;
+            padding: 1em 2em;
+            font-size: 1.1em;
+        }
+
+        .nav a {
+            color: black;
+            margin-left: 1em;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            color: white;
+        }
+
     </style>
 </head>
 <body class="theme-color flex flex-col h-screen">
+
+    <nav class="nav">
+        <a href="#howitworks">How it Works</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <header class="container mx-auto px-6 py-4">
         <div class="flex justify-center items-center">
             <img src="imgs/dolores.jpeg" width="384" height="384" alt="Avatar" class="w-24 h-24 rounded-xl mr-4">
@@ -121,9 +146,55 @@
         </div>
     </footer>
 
+    <!-- "How it Works" Section -->
+    <section id="howitworks" class="container mx-auto px-6 py-8">
+        <h2 class="text-3xl font-bold mb-4">How it Works</h2>
+
+        <div class="bg-black bg-opacity-80 p-6 rounded-lg shadow">
+            <p class="text-lg mb-4 text-white">We've designed Dolores based on the latest <a href="https://arxiv.org/abs/2304.03442" class="underline">Generative Agent paper</a>. While interacting with you, she will be in the following states:</p>
+
+            <p class="mb-4 text-white"><strong class="text-theme-color">* Memory:</strong> She will store each conversation with you on your local device. Whether it's role-playing, an AI companion, or a simple chat object, the more stories that occur between you, the more Dolores gets to know you.</p>
+
+            <p class="mb-4 text-white"><strong class="text-theme-color">* Reflection:</strong> Dolores is able to reflect on your past conversations and uses these reflections to respond to you in every new conversation. This makes her more than just a memory machine, providing novel answers from a deeper level.</p>
+
+            <p class="mb-0 text-white"><strong class="text-theme-color">* Planning and action:</strong> Dolores has her own storylines, these stories are not man-made but are generated based on her past experiences and interactions with you. For example, one time she chatted with me about Japanese cuisine, and by the second chat, she had already enrolled in a Japanese language class.</p>
+        </div>
+
+        <img src="https://hackernoon.imgix.net/images/YaoayzgDWhd2cMiWWxEuX6klMlp2-dfc36eu.jpeg" alt="Diagram showing how Dolores works" class="w-2/3 h-auto mx-auto rounded shadow-lg mt-4">
+
+        <p class="text-gray-700 text-center mt-2">How generative agent works, source from <a href="https://arxiv.org/abs/2304.03442" class="underline">arxiv</a> </p>
+
+        <p class="mt-4">In fact, the interactive logic of conversing with a real person has some significant differences compared to the enclosed agent-town scenario of the paper. Therefore, we've made some changes to Dolores' design compared to the paper, striving to make her more interesting, respond faster, and more human-like.</p>
+    </section>
+
+
+    <!-- "News" Section -->
+    <section id="news" class="container mx-auto px-6 py-8">
+        <h2 class="text-3xl font-bold mb-4">News</h2>
+        <div class="bg-black bg-opacity-80 p-6 rounded-lg shadow">
+            <p class="text-lg mb-8 text-white">Stay tuned for updates about Dolores!</p>
+
+            <p class="mb-2 text-white"><strong class="text-theme-color">July 21, 2023:</strong> Allow user use their own API key to unlock NSFW content.</p>
+            <p class="mb-2 text-white"><strong class="text-theme-color">June 9, 2023:</strong> Got lots of feedback, allow user to design and play with life-like voices.</p>
+            <p class="mb-2 text-white"><strong class="text-theme-color">May 4, 2023:</strong> Transitioned from beta to public version.</p>
+            <p class="text-white"><strong class="text-theme-color">April 15, 2023:</strong> Dolores launched.</p>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- "Contact" Section -->
+    <section id="contact" class="container mx-auto px-6 py-8">
+        <h2 class="text-3xl font-bold mb-4">Contact</h2>
+        <p class="text-lg mb-8">If you have any questions or comments about Dolores, we'd love to hear from you. You can reach us at: <a href="mailto:hi@dolores.app" class="underline text-white">hi@dolores.app</a></p>
+    </section>
+
+
     <footer class="theme-color shadow-md py-6 bg-center">
         <div class="flex justify-center items-center">
-            <p class="text-center text-white mr-2">&copy; 2023 Dolores App. All rights reserved.</p>
+            <p class="text-center text-black mr-2">&copy; 2023 Dolores App. All rights reserved.</p>
             <a href="privacy.html" class="text-white underline">Privacy Policy</a>
         </div>
     </footer>
