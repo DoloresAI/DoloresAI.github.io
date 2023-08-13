@@ -87,6 +87,36 @@
             color: white;
         }
 
+        #download-button {
+            background-color: #FFFFFF !important;
+            color: #000000 !important;
+            padding: 12px 36px;
+            font-weight: 800;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-flex; /* Use inline-flex to position the image and text side by side */
+            text-decoration: none;
+            border-radius: 4px; /* Keeping the rounded rectangle design */
+            align-items: center; /* Align icon and text vertically */
+            justify-content: center;
+        }
+
+        #download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        #download-button:focus {
+            outline: none;
+            box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .apple-icon {
+            width: 20px; /* Adjust based on desired size */
+            height: 20px; /* Adjust based on desired size */
+            margin-right: 8px; /* Space between the icon and the text */
+        }
+
     </style>
 </head>
 <body class="theme-color flex flex-col h-screen">
@@ -117,6 +147,12 @@
             <p id="signature" class="text-lg text-white self-end">—— Dolores Team (actually just one man)</p>
         </div>
 
+        <div class="container mx-auto px-6 py-8 text-center">
+            <a href="https://apps.apple.com/us/app/id6447748965?platform=iphone" id="download-button">
+                <img src="imgs/apple.svg" alt="Apple logo" class="apple-icon"> Download iOS
+            </a>
+        </div>
+
     </header>
 
     <section id="features" class="container mx-auto flex-grow mb-5">
@@ -142,20 +178,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="container mx-auto px-6 py-8 text-center">
-        <a href="https://apps.apple.com/us/app/id6447748965?platform=iphone" class="bg-black py-3 px-8 rounded text-white" id="download">Download iOS</a>
-        <div class="flex justify-center space-x-6 mt-6">
-            <a href="https://discord.gg/pgt4MnFCw4" target="_blank" class="text-white">
-                <img src="imgs/discord.svg" alt="Discord" style="width: 28px; height: 28px;" />
-            </a>
-            <a href="https://twitter.com/dolores_app" target="_blank" class="text-white">
-                <img src="imgs/twitter.svg" alt="Twitter" style="width: 28px; height: 28px;" />
-            </a>
-        </div>
-
-
-    </footer>
 
     <!-- "How it Works" Section -->
     <section id="howitworks" class="container mx-auto px-6 py-8">
@@ -202,6 +224,18 @@
         <p class="text-lg mb-8">If you have any questions or comments about Dolores, we'd love to hear from you. You can reach us at: <a href="mailto:hi@dolores.app" class="underline text-white">hi@dolores.app</a></p>
     </section>
 
+
+    <footer class="container mx-auto px-6 py-4 text-center">
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="https://discord.gg/pgt4MnFCw4" target="_blank" class="text-white">
+                <img src="imgs/discord.svg" alt="Discord" style="width: 28px; height: 28px;" />
+            </a>
+            <a href="https://twitter.com/dolores_app" target="_blank" class="text-white">
+                <img src="imgs/twitter.svg" alt="Twitter" style="width: 28px; height: 28px;" />
+            </a>
+        </div>
+
+    </footer>
 
     <footer class="theme-color shadow-md py-6 bg-center">
         <div class="flex justify-center items-center">
