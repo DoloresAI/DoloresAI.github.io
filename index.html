@@ -90,7 +90,7 @@
         #download-button {
             background-color: #FFFFFF !important;
             color: #000000 !important;
-            padding: 12px 36px;
+            padding: 12px 32px;
             font-weight: 800;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -115,6 +115,30 @@
             width: 20px; /* Adjust based on desired size */
             height: 20px; /* Adjust based on desired size */
             margin-right: 8px; /* Space between the icon and the text */
+        }
+
+        #download-button-white {
+            background-color: #000000 !important;
+            color: #FFFFFF !important;
+            padding: 12px 32px;
+            font-weight: 800;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-flex; /* Use inline-flex to position the image and text side by side */
+            text-decoration: none;
+            border-radius: 4px; /* Keeping the rounded rectangle design */
+            align-items: center; /* Align icon and text vertically */
+            justify-content: center;
+        }
+
+        #download-button-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        #download-button-white:focus {
+            outline: none;
+            box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.2);
         }
 
     </style>
@@ -225,7 +249,9 @@
 
 
     <footer class="container mx-auto px-6 py-8 text-center">
-        <a href="https://apps.apple.com/us/app/id6447748965?platform=iphone" class="bg-black py-3 px-8 rounded text-white">Download iOS</a>
+        <a href="https://apps.apple.com/us/app/id6447748965?platform=iphone" id="download-button-white">
+            <img src="imgs/apple-white.svg" alt="Apple logo white" class="apple-icon"> Download iOS
+        </a>
         <div class="flex justify-center space-x-6 mt-6">
             <a href="https://discord.gg/pgt4MnFCw4" target="_blank" class="text-white">
                 <img src="imgs/discord.svg" alt="Discord" style="width: 28px; height: 28px;" />
