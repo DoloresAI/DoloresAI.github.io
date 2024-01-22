@@ -339,6 +339,8 @@
         <div class="bg-black bg-opacity-80 p-6 rounded-lg shadow">
             <p class="text-lg mb-8 text-white">Stay tuned for updates about Dolores!</p>
 
+            <p class="mb-2 text-white"><strong class="text-theme-color">Jan 14, 2024:</strong> Fixed unresponsive issues
+                and added new realistic-sounding voices. </p>
             <p class="mb-2 text-white"><strong class="text-theme-color">August 14, 2023:</strong> New feature: Display
                 milestone events in your chats. </p>
             <p class="mb-2 text-white"><strong class="text-theme-color">July 21, 2023:</strong> Allow user use their own
@@ -679,7 +681,10 @@
                 subtitleElem2.innerText = translations[langKey]['subtitle_part2'];
                 subtitleElem3.innerText = translations[langKey]['subtitle_part3'];
                 descriptionElem.innerHTML = translations[langKey]['description'];
-                signatureElem.innerText = translations[langKey]['signature'];
+                if (signatureElem) {
+                    signatureElem.innerText = translations[langKey]['signature'];
+                }
+
                 faqQuestion1Elem.innerHTML = translations[langKey]['faq_question1'];
                 faqAnswer1Elem.innerHTML = translations[langKey]['faq_answer1'];
                 faqQuestion2Elem.innerHTML = translations[langKey]['faq_question2'];
