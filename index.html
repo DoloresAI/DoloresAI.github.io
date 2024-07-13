@@ -246,7 +246,7 @@
                     <tr>
                         <td class="py-3 text-left">Trial</td>
                         <td class="py-3 text-left">Free</td>
-                        <td class="px-3 py-3 text-left">200,000 free tokens to try</td>
+                        <td class="px-3 py-3 text-left">500,000 free tokens to try</td>
                     </tr>
                     <tr>
                         <td class="py-3 text-left">Dash</td>
@@ -258,11 +258,11 @@
                         <td class="py-3 text-left">$12.99/month</td>
                         <td class="px-3 py-3 text-left">Unlimited usage</td>
                     </tr>
-                    <tr>
+<!--                     <tr>
                         <td class="py-3 text-left">Advanced</td>
                         <td class="py-3 text-left">$49.99/week</td>
                         <td class="px-3 py-3 text-left">Powered by GPT-4</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -685,12 +685,13 @@
                     signatureElem.innerText = translations[langKey]['signature'];
                 }
 
-                faqQuestion1Elem.innerHTML = translations[langKey]['faq_question1'];
-                faqAnswer1Elem.innerHTML = translations[langKey]['faq_answer1'];
-                faqQuestion2Elem.innerHTML = translations[langKey]['faq_question2'];
-                faqAnswer2Elem.innerHTML = translations[langKey]['faq_answer2'];
-                faqQuestion3Elem.innerHTML = translations[langKey]['faq_question3'];
-                faqAnswer3Elem.innerHTML = translations[langKey]['faq_answer3'];
+                // FAQ questions and answers with fallback to English
+                faqQuestion1Elem.innerHTML = translations[langKey]['faq_question1'] || translations['en']['faq_question1'];
+                faqAnswer1Elem.innerHTML = translations[langKey]['faq_answer1'] || translations['en']['faq_answer1'];
+                faqQuestion2Elem.innerHTML = translations[langKey]['faq_question2'] || translations['en']['faq_question2'];
+                faqAnswer2Elem.innerHTML = translations[langKey]['faq_answer2'] || translations['en']['faq_answer2'];
+                faqQuestion3Elem.innerHTML = translations[langKey]['faq_question3'] || translations['en']['faq_question3'];
+                faqAnswer3Elem.innerHTML = translations[langKey]['faq_answer3'] || translations['en']['faq_answer3'];
             } else {
                 titleElem.innerText = translations['en']['title'];
                 subtitleElem1.innerText = translations['en']['subtitle_part1'];
